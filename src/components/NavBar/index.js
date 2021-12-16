@@ -1,9 +1,23 @@
-import { Header, Ul, Li, Nav, StyledLink, NavCTA } from "./style";
+import {
+  Header,
+  Ul,
+  Li,
+  Nav,
+  StyledLink,
+  NavCTA,
+  LogoMenuWrapper,
+} from "./style";
+import Logo from "../Logo/index";
+import MenuMobile from "../MenuMobile";
 
 export default function NavBar() {
   return (
     <Header>
       <Nav>
+        <LogoMenuWrapper>
+          <Logo />
+          <MenuMobile />
+        </LogoMenuWrapper>
         <Ul>
           <Li>
             <StyledLink to={"/"}>home</StyledLink>
