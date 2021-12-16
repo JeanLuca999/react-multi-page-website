@@ -10,7 +10,8 @@ export const Header = styled.header`
   z-index: 3;
 
   @media screen and (min-width: 800px) {
-    background-color: transparent;
+    background-color: ${(props) =>
+      props.scrolled ? "#0f172b" : "transparent"};
   }
 `;
 
@@ -20,7 +21,7 @@ export const Nav = styled.nav`
   @media screen and (min-width: 800px) {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: ${(props) => (props.scrolled ? "1800px" : "1200px")};
     margin: 0 auto;
     width: 100%;
   }

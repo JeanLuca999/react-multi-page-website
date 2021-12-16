@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 export default function Home() {
   return (
     <BackgroundPage>
-      <NavBar inHomePage={true} />
+      <NavBar />
       <HomeBannerInfo />
     </BackgroundPage>
   );
