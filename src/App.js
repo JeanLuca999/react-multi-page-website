@@ -3,9 +3,9 @@ import { GlobalStyle } from "./components/GlobalStyle";
 
 import { GlobalContext } from "./components/GlobalContext";
 
-import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import { useState } from "react";
+import About from "./pages/About";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,9 +20,9 @@ function App() {
       <GlobalStyle />
       <GlobalContext.Provider value={{ menuOpen, handleMenuClick }}>
         <BrowserRouter>
-          <NavBar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
           </Routes>
         </BrowserRouter>
       </GlobalContext.Provider>

@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 
 export const Header = styled.header`
   background-color: #0f172b;
+  position: relative;
+  z-index: 3;
+
+  @media screen and (min-width: 800px) {
+    background-color: transparent;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -44,6 +50,7 @@ export const Ul = styled.ul`
     flex-direction: row;
     height: auto;
     align-items: center;
+    background-color: transparent;
   }
 `;
 
