@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 export const Header = styled.header`
   background-color: #0f172b;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 3;
 
   @media screen and (min-width: 800px) {
@@ -70,6 +73,13 @@ export const StyledLink = styled(Link)`
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+
+  &:hover,
+  &:focus {
+    color: #fea116;
+  }
 `;
 
 export const NavCTA = styled.button`
