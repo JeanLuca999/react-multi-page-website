@@ -8,7 +8,7 @@ export const Header = styled.header`
   right: 0;
   left: 0;
   z-index: 3;
-
+  transition: all 0.4s ease;
   @media screen and (min-width: 800px) {
     background-color: ${(props) =>
       props.scrolled ? "#0f172b" : "transparent"};

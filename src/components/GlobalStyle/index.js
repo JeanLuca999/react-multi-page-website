@@ -17,6 +17,5 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Heebo", sans-serif;
-    background-color: darkgreen;
   }
 `;
