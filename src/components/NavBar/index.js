@@ -7,10 +7,16 @@ import {
   NavCTA,
   LogoMenuWrapper,
 } from "./style";
+
+import { useContext } from "react";
+
 import Logo from "../Logo/index";
 import MenuMobile from "../MenuMobile";
+import { GlobalContext } from "../GlobalContext";
 
 export default function NavBar() {
+  const { menuOpen } = useContext(GlobalContext);
+
   return (
     <Header>
       <Nav>
@@ -18,7 +24,7 @@ export default function NavBar() {
           <Logo />
           <MenuMobile />
         </LogoMenuWrapper>
-        <Ul>
+        <Ul menuOpen={menuOpen}>
           <Li>
             <StyledLink to={"/"}>home</StyledLink>
           </Li>

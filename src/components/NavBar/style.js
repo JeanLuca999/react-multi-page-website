@@ -13,8 +13,8 @@ export const LogoMenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  padding-bottom: 16px;
+  //border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  //padding-bottom: 16px;
 `;
 
 export const Ul = styled.ul`
@@ -24,6 +24,15 @@ export const Ul = styled.ul`
   align-items: flex-start;
 
   background-color: #0f172b;
+  position: relative;
+  height: ${(props) => (props.menuOpen ? "350px" : "0")};
+  overflow-y: hidden;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+
+  border-top: ${(props) =>
+    props.menuOpen ? "1px solid rgba(255, 255, 255, 0.25)" : "0"};
+  margin-top: ${(props) => (props.menuOpen ? "16px" : "0")};
 `;
 
 export const Li = styled.li`
