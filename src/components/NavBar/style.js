@@ -7,14 +7,20 @@ export const Header = styled.header`
 
 export const Nav = styled.nav`
   padding: 16px;
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
 `;
 
 export const LogoMenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  //padding-bottom: 16px;
 `;
 
 export const Ul = styled.ul`
@@ -33,10 +39,20 @@ export const Ul = styled.ul`
   border-top: ${(props) =>
     props.menuOpen ? "1px solid rgba(255, 255, 255, 0.25)" : "0"};
   margin-top: ${(props) => (props.menuOpen ? "16px" : "0")};
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+  }
 `;
 
 export const Li = styled.li`
   padding: 10px 0;
+
+  @media screen and (min-width: 800px) {
+    margin: 0 5px;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -58,4 +74,5 @@ export const NavCTA = styled.button`
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 `;

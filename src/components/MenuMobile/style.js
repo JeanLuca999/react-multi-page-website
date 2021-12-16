@@ -3,9 +3,14 @@ import styled from "styled-components";
 export const MenuWrapper = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 3px 6px;
+  cursor: pointer;
 
   &:focus {
     border: 2px solid white;
+  }
+
+  @media screen and (min-width: 800px) {
+    display: none;
   }
 `;
 
