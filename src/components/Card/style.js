@@ -8,10 +8,11 @@ export const Icon = styled.img`
 
 export const Title = styled.span`
   display: block;
-  font-size: 24px;
+  font-size: 1.25rem;
   font-weight: bolder;
   font-family: "Nunito", sans-serif;
   color: #0f172b;
+  margin: 3px 0;
 `;
 
 export const Text = styled.p`
@@ -22,7 +23,7 @@ export const Text = styled.p`
 export const Wrapper = styled.div`
   padding: 24px;
   margin: 5px;
-  max-width: 220px;
+  max-width: 240px;
   width: 90%;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
@@ -30,12 +31,12 @@ export const Wrapper = styled.div`
 
   &:hover,
   &:focus {
+    background-color: #fea116;
     ${Title} {
       color: #fff;
     }
     ${Text} {
       color: #fff;
     }
-    background-color: #fea116;
   }
 `;
