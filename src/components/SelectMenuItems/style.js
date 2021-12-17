@@ -4,9 +4,14 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem;
+  justify-content: space-evenly;
+  max-width: 700px;
+  margin: 1rem auto;
+  flex-wrap: wrap;
 `;
 
 export const Item = styled.div`
+  margin: 0 3px;
   display: flex;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -20,16 +25,15 @@ export const Item = styled.div`
 `;
 
 export const Icon = styled.img`
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-  padding-right: 1rem;
+  width: 40px;
+  height: 40px;
 `;
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 10px;
 `;
 
 export const Type = styled.p`
