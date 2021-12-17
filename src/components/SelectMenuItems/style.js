@@ -11,11 +11,12 @@ export const Container = styled.div`
 `;
 
 export const Item = styled.div`
-  margin: 0 3px;
+  margin: 5px 3px;
   display: flex;
   cursor: pointer;
   transition: all 0.4s ease;
   outline: 0;
+  padding-bottom: 3px;
   border-bottom: 3px solid transparent;
 
   &:hover,

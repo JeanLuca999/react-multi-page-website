@@ -1,6 +1,7 @@
 import { CursiveText } from "../CursiveText";
 import SelectMenuItems from "../SelectMenuItems";
 import { Wrapper, Title, TextContainer } from "./style";
+import WrapperMenuItems from "../WrapperMenuItems";
 
 export default function MostPopularItemsSection() {
   return (
@@ -10,6 +11,7 @@ export default function MostPopularItemsSection() {
         <Title>Most Popular Items</Title>
         <SelectMenuItems />
       </TextContainer>
+      <WrapperMenuItems />
     </Wrapper>
   );
 }
