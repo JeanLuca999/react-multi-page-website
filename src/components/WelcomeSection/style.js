@@ -4,6 +4,7 @@ export const WelcomeSectionWrapper = styled.section`
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -79,6 +80,30 @@ export const Text = styled.p`
   }
 `;
 
-export const MetricsInfo = styled.div``;
+export const MetricsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-export const Button = styled.button``;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+export const Button = styled.button`
+  background-color: #fea116;
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  font-weight: bold;
+  margin: 1rem 0;
+  cursor: pointer;
+
+  @media screen and (min-width: 800px) {
+    font-size: 1rem;
+  }
+`;
