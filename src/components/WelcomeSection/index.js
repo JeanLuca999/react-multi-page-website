@@ -1,13 +1,14 @@
 import {
   WelcomeSectionWrapper,
   TextContainer,
-  CursiveText,
   Title,
   Icon,
   Text,
   MetricsWrapper,
   Button,
 } from "./style";
+
+import { CursiveText } from "../CursiveText";
 
 import MetricsInfo from "../MetricsInfo";
 import logo from "../../assets/logo.svg";

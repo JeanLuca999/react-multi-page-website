@@ -6,8 +6,11 @@ export default function Card({ iconSrc, title, text, iconSrc_white }) {
 
   return (
     <Wrapper
+      tabIndex={0}
       onMouseEnter={() => setCurrentSrc(iconSrc_white)}
       onMouseLeave={() => setCurrentSrc(iconSrc)}
+      onFocus={() => setCurrentSrc(iconSrc_white)}
+      onBlur={() => setCurrentSrc(iconSrc)}
     >
       <Icon src={currentSrc} alt="icon"></Icon>
       <Title>{title}</Title>
