@@ -8,6 +8,7 @@ export const WelcomeSectionWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  place-items: center;
 
   @media screen and (min-width: 800px) {
     grid-template-columns: 1fr 1fr;

@@ -11,10 +11,12 @@ import {
 
 import MetricsInfo from "../MetricsInfo";
 import logo from "../../assets/logo.svg";
+import GridImages from "../GridImages";
 
 export default function WelcomeSection() {
   return (
     <WelcomeSectionWrapper>
+      <GridImages />
       <TextContainer>
         <CursiveText>About Us</CursiveText>
         <Title>

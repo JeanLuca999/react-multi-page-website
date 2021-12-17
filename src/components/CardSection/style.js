@@ -7,4 +7,5 @@ export const CardSectionWrapper = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 0;
+  padding-top: 5rem;
 `;
