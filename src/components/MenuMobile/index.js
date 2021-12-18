@@ -6,7 +6,11 @@ export default function MenuMobile() {
   const { handleMenuClick } = useContext(GlobalContext);
 
   return (
-    <MenuWrapper tabIndex={0} onClick={handleMenuClick}>
+    <MenuWrapper
+      tabIndex={0}
+      onClick={handleMenuClick}
+      onKeyDown={(e) => (e.keyCode === 13 ? handleMenuClick() : null)}
+    >
       <MenuElement />
       <MenuElement />
       <MenuElement />
