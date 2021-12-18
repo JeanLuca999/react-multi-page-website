@@ -60,7 +60,7 @@ export const Form = styled.form`
 
 export const Label = styled.label`
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   left: 1rem;
   pointer-events: none;
@@ -78,7 +78,7 @@ export const LabelContainer = styled.div`
     ${Label} {
       &:nth-of-type(1) {
         font-size: ${(props) => (props.inputNameFocus ? "0.75rem" : "1rem")};
-        top: ${(props) => (props.inputNameFocus ? "calc(20% - 2px)" : "50%")};
+        top: ${(props) => (props.inputNameFocus ? "calc(20% - 2px)" : "45%")};
       }
     }
   }
@@ -89,7 +89,7 @@ export const LabelContainer = styled.div`
     ${Label} {
       &:nth-of-type(1) {
         font-size: ${(props) => (props.inputEmailFocus ? "0.75rem" : "1rem")};
-        top: ${(props) => (props.inputEmailFocus ? "calc(20% - 2px)" : "50%")};
+        top: ${(props) => (props.inputEmailFocus ? "calc(20% - 2px)" : "45%")};
       }
     }
   }
@@ -111,6 +111,7 @@ export const InputName = styled.input`
   height: 58px;
   padding: 0 10px;
   padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 1rem;
   font-family: "Heebo", sans-serif;
   outline: 0;
@@ -124,6 +125,7 @@ export const InputEmail = styled.input`
   width: 100%;
   height: 58px;
   padding: 0 10px;
+  padding-bottom: 10px;
   padding-top: 10px;
   font-size: 1rem;
   font-family: "Heebo", sans-serif;
