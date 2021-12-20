@@ -5,6 +5,7 @@ import MostPopularItemsSection from "../components/MostPopularItemsSection";
 import NavBar from "../components/NavBar";
 import ReservationSection from "../components/ReservationSection";
 import TeamMembersSection from "../components/TeamMembersSection";
+import TestimonialSection from "../components/TestimonialSection";
 import WelcomeSection from "../components/WelcomeSection";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <MostPopularItemsSection />
       <ReservationSection />
       <TeamMembersSection />
+      <TestimonialSection />
     </>
   );
 }
