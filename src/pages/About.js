@@ -1,5 +1,6 @@
 import { useEffect } from "react/cjs/react.development";
 import BackgroundPage from "../components/BackgroundPage";
+import BannerTitleInfo from "../components/BannerTitleInfo";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import TeamMembersSection from "../components/TeamMembersSection";
@@ -14,6 +15,7 @@ export default function About() {
     <>
       <BackgroundPage>
         <NavBar />
+        <BannerTitleInfo title={"About Us"} pathName={"About"} />
       </BackgroundPage>
       <main>
         <WelcomeSection />
