@@ -19,15 +19,15 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <GlobalContext.Provider value={{ menuOpen, handleMenuClick }}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <GlobalContext.Provider value={{ menuOpen, handleMenuClick }}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/service" element={<Service />}></Route>
           </Routes>
-        </BrowserRouter>
-      </GlobalContext.Provider>
+        </GlobalContext.Provider>
+      </BrowserRouter>
     </>
   );
 }
