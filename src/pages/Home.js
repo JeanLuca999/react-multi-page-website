@@ -1,5 +1,6 @@
 import BackgroundPage from "../components/BackgroundPage";
 import CardSection from "../components/CardSection";
+import Footer from "../components/Footer";
 import HomeBannerInfo from "../components/HomeBannerInfo";
 import MostPopularItemsSection from "../components/MostPopularItemsSection";
 import NavBar from "../components/NavBar";
@@ -21,6 +22,7 @@ export default function Home() {
       <ReservationSection />
       <TeamMembersSection />
       <TestimonialSection />
+      <Footer />
     </>
   );
 }
