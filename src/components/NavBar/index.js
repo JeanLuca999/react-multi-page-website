@@ -6,6 +6,10 @@ import {
   StyledLink,
   NavCTA,
   LogoMenuWrapper,
+  DropDowm,
+  DropDowmText,
+  DropDowmContent,
+  DropDownContentText,
 } from "./style";
 
 import { useContext, useEffect, useState } from "react";
@@ -54,7 +58,18 @@ export default function NavBar() {
             <StyledLink to={"/menu"}>menu</StyledLink>
           </Li>
           <Li>
-            <StyledLink to={"/pages"}>pages</StyledLink>
+            <DropDowm>
+              <DropDowmText tabIndex={0}>PAGES</DropDowmText>
+              <DropDowmContent>
+                <DropDownContentText to={"/booking"}>
+                  Booking
+                </DropDownContentText>
+                <DropDownContentText to={"/team"}>Our Team</DropDownContentText>
+                <DropDownContentText to={"/testimonial"}>
+                  Testimonial
+                </DropDownContentText>
+              </DropDowmContent>
+            </DropDowm>
           </Li>
           <Li>
             <StyledLink to={"/contact"}>contact</StyledLink>

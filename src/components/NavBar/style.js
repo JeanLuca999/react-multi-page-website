@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Header = styled.header`
@@ -41,7 +41,7 @@ export const Ul = styled.ul`
 
   background-color: #0f172b;
   position: relative;
-  height: ${(props) => (props.menuOpen ? "350px" : "0")};
+  height: ${(props) => (props.menuOpen ? "auto" : "0")};
   overflow-y: hidden;
   transition-duration: 0.4s;
   transition-timing-function: ease;
@@ -51,10 +51,13 @@ export const Ul = styled.ul`
   margin-top: ${(props) => (props.menuOpen ? "16px" : "0")};
 
   @media screen and (min-width: 800px) {
+    display: flex;
     flex-direction: row;
     height: auto;
     align-items: center;
     background-color: transparent;
+    border-top: 0;
+    overflow-y: visible;
   }
 `;
 
@@ -93,4 +96,66 @@ export const NavCTA = styled.button`
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+`;
+
+export const DropDowmText = styled.span`
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    color: #fea116;
+  }
+
+  @media screen and (min-width: 800px) {
+    font-size: 1rem;
+  }
+`;
+
+export const DropDowmContent = styled.div`
+  background-color: #fff;
+  position: relative;
+  height: 0;
+  overflow-y: hidden;
+
+  @media screen and (min-width: 800px) {
+    position: absolute;
+  }
+`;
+
+export const DropDowm = styled.div`
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    ${DropDowmContent} {
+      height: auto;
+      overflow-y: initial;
+      padding: 10px 0;
+    }
+  }
+`;
+
+export const DropDownContentText = styled(Link)`
+  font-size: 1.25rem;
+  color: #666565;
+  display: block;
+  z-index: 9;
+  text-decoration: none;
+  margin: 4px 0;
+  padding: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: lightgray;
+  }
+
+  @media screen and (min-width: 800px) {
+    font-size: 1rem;
+  }
 `;
