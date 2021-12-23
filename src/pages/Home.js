@@ -12,7 +12,7 @@ import WelcomeSection from "../components/WelcomeSection";
 
 export default function Home() {
   useEffect(() => {
-    window.window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   return (
