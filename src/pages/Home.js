@@ -1,3 +1,4 @@
+import { useEffect } from "react/cjs/react.development";
 import BackgroundPage from "../components/BackgroundPage";
 import CardSection from "../components/CardSection";
 import Footer from "../components/Footer";
@@ -10,18 +11,24 @@ import TestimonialSection from "../components/TestimonialSection";
 import WelcomeSection from "../components/WelcomeSection";
 
 export default function Home() {
+  useEffect(() => {
+    window.window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <BackgroundPage>
         <NavBar />
         <HomeBannerInfo />
       </BackgroundPage>
-      <CardSection />
-      <WelcomeSection />
-      <MostPopularItemsSection />
-      <ReservationSection />
-      <TeamMembersSection />
-      <TestimonialSection />
+      <main>
+        <CardSection />
+        <WelcomeSection />
+        <MostPopularItemsSection />
+        <ReservationSection />
+        <TeamMembersSection />
+        <TestimonialSection />
+      </main>
       <Footer />
     </>
   );
