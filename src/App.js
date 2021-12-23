@@ -8,6 +8,9 @@ import { useState } from "react";
 import About from "./pages/About";
 import Service from "./pages/Service";
 import Menu from "./pages/Menu";
+import Booking from "./pages/Booking";
+import Team from "./pages/Team";
+import Testimonial from "./pages/Testimonial";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +30,9 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/service" element={<Service />}></Route>
             <Route path="/menu" element={<Menu />}></Route>
+            <Route path="/booking" element={<Booking />}></Route>
+            <Route path="/team" element={<Team />}></Route>
+            <Route path="/testimonial" element={<Testimonial />}></Route>
           </Routes>
         </GlobalContext.Provider>
       </BrowserRouter>
