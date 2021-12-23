@@ -1,12 +1,12 @@
 import BackgroundPage from "../components/BackgroundPage";
 import BannerTitleInfo from "../components/BannerTitleInfo";
-import CardSection from "../components/CardSection";
 import Footer from "../components/Footer";
+import MostPopularItemsSection from "../components/MostPopularItemsSection";
 import NavBar from "../components/NavBar";
 
 import { useEffect } from "react";
 
-export default function Service() {
+export default function Menu() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -14,10 +14,10 @@ export default function Service() {
     <>
       <BackgroundPage>
         <NavBar />
-        <BannerTitleInfo title={"Services"} pathName="service" />
+        <BannerTitleInfo title={"Food Menu"} pathName={"menu"} />
       </BackgroundPage>
       <main>
-        <CardSection />
+        <MostPopularItemsSection />
       </main>
       <Footer />
     </>

@@ -4,6 +4,7 @@ export const Wrapper = styled.section`
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 3rem 0;
 `;
 
 export const TextContainer = styled.div`
