@@ -14,11 +14,7 @@ export const CursiveText = styled.span`
     height: 2px;
     background-color: #fea116;
     top: 50%;
-    right: calc(-60% - 10px);
-
-    @media screen and (min-width: 800px) {
-      right: -60%;
-    }
+    left: 110%;
   }
 
   &::after {
@@ -29,10 +25,6 @@ export const CursiveText = styled.span`
     height: 2px;
     background-color: #fea116;
     top: 50%;
-    right: calc(110% + 10px);
-
-    @media screen and (min-width: 800px) {
-      right: 110%;
-    }
+    right: 110%;
   }
 `;
