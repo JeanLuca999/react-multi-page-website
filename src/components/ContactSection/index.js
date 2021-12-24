@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CursiveText } from "../CursiveText";
 import {
   ContactWrapper,
@@ -22,6 +23,16 @@ import {
 import message_icon from "../../assets/message-icon.svg";
 
 export default function ContactSection() {
+  const [inputNameFocus, setInputNameFocus] = useState(false);
+  const [inputEmailFocus, setInputEmailFocus] = useState(false);
+  const [inputSubjectFocus, setInputSubjectFocus] = useState(false);
+  const [textAreaFocus, setTextAreaFocus] = useState(false);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [text, setText] = useState("");
+
   return (
     <ContactWrapper>
       <TextContainer>
@@ -53,20 +64,43 @@ export default function ContactSection() {
         <IFrame src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6000584.0718284445!2d-75.770041!3d42.74663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1640364033932!5m2!1sen!2sbd"></IFrame>
         <Form>
           <LabelContainer>
-            <Label>Your Name</Label>
-            <InputName type={"text"}></InputName>
+            <Label inputNameFocus={inputNameFocus}>Your Name</Label>
+            <InputName
+              type={"text"}
+              onFocus={() => setInputNameFocus(true)}
+              onBlur={name.length ? null : () => setInputNameFocus(false)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            ></InputName>
           </LabelContainer>
           <LabelContainer>
-            <Label>Your Email</Label>
-            <InputEmail type={"email"}></InputEmail>
+            <Label inputEmailFocus={inputEmailFocus}>Your Email</Label>
+            <InputEmail
+              type={"email"}
+              onFocus={() => setInputEmailFocus(true)}
+              onBlur={email.length ? null : () => setInputEmailFocus(false)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></InputEmail>
           </LabelContainer>
           <LabelContainer>
-            <Label>Subject</Label>
-            <InputSubject type={"text"}></InputSubject>
+            <Label inputSubjectFocus={inputSubjectFocus}>Subject</Label>
+            <InputSubject
+              type={"text"}
+              onFocus={() => setInputSubjectFocus(true)}
+              onBlur={subject.length ? null : () => setInputSubjectFocus(false)}
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            ></InputSubject>
           </LabelContainer>
           <LabelContainer>
-            <Label>Message</Label>
-            <TextArea></TextArea>
+            <Label textAreaFocus={textAreaFocus}>Message</Label>
+            <TextArea
+              onFocus={() => setTextAreaFocus(true)}
+              onBlur={text.length ? null : () => setTextAreaFocus(false)}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            ></TextArea>
           </LabelContainer>
           <Submit>send message</Submit>
         </Form>

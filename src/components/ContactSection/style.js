@@ -112,6 +112,11 @@ export const LabelContainer = styled.div`
   &:nth-of-type(4) {
     grid-area: textmessage;
   }
+
+  &:focus,
+  &:hover {
+    background-color: red;
+  }
 `;
 
 export const Label = styled.label`
@@ -122,6 +127,12 @@ export const Label = styled.label`
   font-size: 1rem;
   pointer-events: none;
   padding-left: 20px;
+  transition: all 0.4s ease;
+
+  ${(props) => (props.inputNameFocus ? "font-size: 0.7rem; top: 25%;" : "")};
+  ${(props) => (props.inputEmailFocus ? "font-size: 0.7rem; top: 25%;" : "")};
+  ${(props) => (props.inputSubjectFocus ? "font-size: 0.7rem; top: 25%;" : "")};
+  ${(props) => (props.textAreaFocus ? "font-size: 0.7rem; top: 25%;" : "")};
 `;
 
 export const Input = styled.input`
@@ -132,6 +143,8 @@ export const Input = styled.input`
   font-size: 1rem;
   border: 1px solid lightgray;
   outline: 0;
+  padding-left: 20px;
+  padding-top: 12px;
 
   &:focus {
     box-shadow: 0 0 5px #fea116;
@@ -151,6 +164,11 @@ export const TextArea = styled.textarea`
   height: 100px;
   border: 1px solid lightgray;
   outline: 0;
+  padding-left: 20px;
+  padding-top: 40px;
+  font-family: "Heebo", sans-serif;
+  font-size: 0.9rem;
+
   &:focus {
     box-shadow: 0 0 5px #fea116;
     border: 0;
