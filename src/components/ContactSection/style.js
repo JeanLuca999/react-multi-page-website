@@ -54,3 +54,118 @@ export const EmailIcon = styled.img`
   width: 25px;
   height: 25px;
 `;
+
+export const FormWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  @media screen and (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+`;
+
+export const IFrame = styled.iframe`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Form = styled.form`
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template:
+    "name"
+    "email"
+    "subject"
+    "textmessage"
+    "submit";
+  gap: 16px;
+
+  @media screen and (min-width: 800px) {
+    padding-left: 1rem;
+    padding-top: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template:
+      "name email"
+      "subject subject"
+      "textmessage textmessage"
+      "submit submit";
+  }
+`;
+
+export const LabelContainer = styled.div`
+  position: relative;
+
+  &:nth-of-type(1) {
+    grid-area: name;
+  }
+  &:nth-of-type(2) {
+    grid-area: email;
+  }
+  &:nth-of-type(3) {
+    grid-area: subject;
+  }
+  &:nth-of-type(4) {
+    grid-area: textmessage;
+  }
+`;
+
+export const Label = styled.label`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666565;
+  font-size: 1rem;
+  pointer-events: none;
+  padding-left: 20px;
+`;
+
+export const Input = styled.input`
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: #666565;
+  font-size: 1rem;
+  border: 1px solid lightgray;
+  outline: 0;
+
+  &:focus {
+    box-shadow: 0 0 5px #fea116;
+    border: 0;
+  }
+`;
+
+export const InputName = styled(Input)``;
+
+export const InputEmail = styled(Input)``;
+
+export const InputSubject = styled(Input)``;
+
+export const TextArea = styled.textarea`
+  display: block;
+  width: 100%;
+  height: 100px;
+  border: 1px solid lightgray;
+  outline: 0;
+  &:focus {
+    box-shadow: 0 0 5px #fea116;
+    border: 0;
+  }
+`;
+
+export const Submit = styled.button`
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #fea116;
+  text-transform: uppercase;
+  grid-area: submit;
+  padding: 16px;
+  cursor: pointer;
+
+  border: 0;
+`;
