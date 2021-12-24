@@ -12,11 +12,15 @@ export const FooterWrapper = styled.footer`
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   max-width: 1500px;
   margin: 0 auto;
+
+  @media screen and (min-width: 800px) {
+    justify-content: center;
+  }
 `;
 
 export const Content = styled.div`
