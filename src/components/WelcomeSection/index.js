@@ -18,7 +18,6 @@ import { GlobalContext } from "../GlobalContext";
 
 export default function WelcomeSection() {
   const { theme } = useContext(GlobalContext);
-  console.log("a cor é ", theme.titleColor);
 
   return (
     <WelcomeSectionWrapper>

@@ -28,7 +28,6 @@ export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
 
   function onScroll() {
-    console.log("scrollou ai");
     if (window.pageYOffset >= 70) {
       setScrolled(true);
     } else if (window.pageYOffset < 70) {
