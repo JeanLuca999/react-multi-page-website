@@ -21,7 +21,12 @@ export default function Service() {
         <NavBar />
         <BannerTitleInfo title={"Services"} pathName="service" />
       </BackgroundPage>
-      <main style={{ backgroundColor: theme.backgroundColor }}>
+      <main
+        style={{
+          backgroundColor: theme.backgroundColor,
+          transition: "all 0.4s ease",
+        }}
+      >
         <CardSection />
       </main>
       <Footer />

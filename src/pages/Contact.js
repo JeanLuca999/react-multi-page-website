@@ -15,7 +15,12 @@ export default function Contact() {
         <NavBar />
         <BannerTitleInfo title={"Contact Us"} pathName={"contact"} />
       </BackgroundPage>
-      <main style={{ backgroundColor: theme.backgroundColor }}>
+      <main
+        style={{
+          backgroundColor: theme.backgroundColor,
+          transition: "all 0.4s ease",
+        }}
+      >
         <ContactSection />
       </main>
       <Footer />

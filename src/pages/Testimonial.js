@@ -20,7 +20,12 @@ export default function Testimonial() {
         <NavBar />
         <BannerTitleInfo title={"Testimonial"} pathName={"testimonial"} />
       </BackgroundPage>
-      <main style={{ backgroundColor: theme.backgroundColor }}>
+      <main
+        style={{
+          backgroundColor: theme.backgroundColor,
+          transition: "all 0.4s ease",
+        }}
+      >
         <TestimonialSection />
       </main>
       <Footer />

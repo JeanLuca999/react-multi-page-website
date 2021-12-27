@@ -24,7 +24,12 @@ export default function Home() {
         <NavBar />
         <HomeBannerInfo />
       </BackgroundPage>
-      <main style={{ backgroundColor: theme.backgroundColor }}>
+      <main
+        style={{
+          backgroundColor: theme.backgroundColor,
+          transition: "all 0.4s ease",
+        }}
+      >
         <CardSection />
         <WelcomeSection />
         <MostPopularItemsSection />

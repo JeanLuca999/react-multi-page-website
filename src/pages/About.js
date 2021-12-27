@@ -20,7 +20,12 @@ export default function About() {
         <NavBar />
         <BannerTitleInfo title={"About Us"} pathName={"About"} />
       </BackgroundPage>
-      <main style={{ backgroundColor: theme.backgroundColor }}>
+      <main
+        style={{
+          backgroundColor: theme.backgroundColor,
+          transition: "all 0.4s ease",
+        }}
+      >
         <WelcomeSection />
         <TeamMembersSection />
       </main>

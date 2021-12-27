@@ -20,7 +20,12 @@ export default function Team() {
         <NavBar />
         <BannerTitleInfo title={"Our Team"} pathName={"team"} />
       </BackgroundPage>
-      <main style={{ backgroundColor: theme.backgroundColor }}>
+      <main
+        style={{
+          backgroundColor: theme.backgroundColor,
+          transition: "all 0.4s ease",
+        }}
+      >
         <TeamMembersSection />
       </main>
       <Footer />

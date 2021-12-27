@@ -21,7 +21,11 @@ export default function Booking() {
         <BannerTitleInfo title={"Booking"} pathName={"Booking"} />
       </BackgroundPage>
       <main
-        style={{ backgroundColor: theme.backgroundColor, padding: "3rem 0" }}
+        style={{
+          backgroundColor: theme.backgroundColor,
+          padding: "3rem 0",
+          transition: "all 0.4s ease",
+        }}
       >
         <ReservationSection />
       </main>

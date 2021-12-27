@@ -11,4 +11,5 @@ export const Button = styled.button`
   color: ${(props) => props.color};
   background-color: ${(props) => (props.color === "#fff" ? "#181818" : "#fff")};
   cursor: pointer;
+  transition: all 0.4s ease;
 `;

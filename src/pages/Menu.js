@@ -21,7 +21,12 @@ export default function Menu() {
         <NavBar />
         <BannerTitleInfo title={"Food Menu"} pathName={"menu"} />
       </BackgroundPage>
-      <main style={{ backgroundColor: theme.backgroundColor }}>
+      <main
+        style={{
+          backgroundColor: theme.backgroundColor,
+          transition: "all 0.4s ease",
+        }}
+      >
         <MostPopularItemsSection />
       </main>
       <Footer />
