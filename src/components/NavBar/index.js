@@ -12,16 +12,20 @@ import {
   DropDownContentText,
 } from "./style";
 
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import Logo from "../Logo/index";
 import MenuMobile from "../MenuMobile";
-import { GlobalContext } from "../GlobalContext";
 import ThemeButton from "../ThemeButton";
 
 export default function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function handleMenuClick() {
+    setMenuOpen((prev) => !prev);
+  }
+
   const [scrolled, setScrolled] = useState(false);
-  const { menuOpen } = useContext(GlobalContext);
 
   function onScroll() {
     console.log("scrollou ai");
@@ -38,14 +42,12 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const { toggleTheme } = useContext(GlobalContext);
-
   return (
     <Header scrolled={scrolled}>
       <Nav scrolled={scrolled}>
         <LogoMenuWrapper>
           <Logo />
-          <MenuMobile />
+          <MenuMobile handleMenuClick={handleMenuClick} />
         </LogoMenuWrapper>
         <Ul menuOpen={menuOpen}>
           <Li>

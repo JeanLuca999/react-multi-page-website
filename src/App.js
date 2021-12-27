@@ -27,12 +27,6 @@ function App() {
   };
 
   const [theme, setTheme] = useState(themeValues.light);
-  const [menuOpen, setMenuOpen] = useState(false);
-  console.log(theme);
-  function handleMenuClick() {
-    setMenuOpen((prev) => !prev);
-    console.log("menu clicked");
-  }
 
   function toggleTheme() {
     theme.textColor === "#fff"
@@ -44,9 +38,7 @@ function App() {
     <>
       <GlobalStyle />
       <BrowserRouter>
-        <GlobalContext.Provider
-          value={{ theme, toggleTheme, menuOpen, handleMenuClick }}
-        >
+        <GlobalContext.Provider value={{ theme, toggleTheme }}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
