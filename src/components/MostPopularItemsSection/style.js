@@ -12,7 +12,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: #0f172b;
+  color: ${(props) => props.color};
   font-family: "Nunito", sans-serif;
   font-weight: bolder;
   font-size: 2rem;

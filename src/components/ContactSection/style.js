@@ -14,7 +14,7 @@ export const TextContainer = styled.div`
 export const Title = styled.h2`
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-  color: #0f172b;
+  color: ${(props) => props.color};
   font-size: 3rem;
 `;
 
@@ -37,7 +37,7 @@ export const EmailContent = styled.div`
 `;
 
 export const EmailText = styled.p`
-  color: #666565;
+  color: ${(props) => props.color};
   font-size: 1.25rem;
   display: flex;
   align-items: center;

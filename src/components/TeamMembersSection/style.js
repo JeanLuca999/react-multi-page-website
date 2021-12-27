@@ -17,7 +17,7 @@ export const CardsContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: 3rem;
-  color: #0f172b;
+  color: ${(props) => props.color};
   font-weight: bold;
   font-family: "Nunito", sans-serif;
 `;

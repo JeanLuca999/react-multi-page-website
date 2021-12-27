@@ -6,12 +6,16 @@ import chef02 from "../../assets/chef02.jpg";
 import chef03 from "../../assets/chef03.jpg";
 import chef04 from "../../assets/chef04.jpg";
 import { CursiveText } from "../CursiveText";
+import { useContext } from "react/cjs/react.development";
+import { GlobalContext } from "../GlobalContext";
 
 export default function TeamMembersSection() {
+  const { theme } = useContext(GlobalContext);
+
   return (
     <Wrapper>
       <CursiveText left>Team Members</CursiveText>
-      <Title>Our Master Chefs</Title>
+      <Title color={theme.titleColor}>Our Master Chefs</Title>
       <CardsContainer>
         <CardTeamMember
           imgSrc={chef01}

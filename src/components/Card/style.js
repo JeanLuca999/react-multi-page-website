@@ -24,6 +24,7 @@ export const Wrapper = styled.div`
   padding: 24px;
   margin: 5px;
   max-width: 280px;
+  background-color: #fff;
   width: 90%;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;

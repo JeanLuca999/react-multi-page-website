@@ -21,6 +21,8 @@ import {
 } from "./style";
 
 import message_icon from "../../assets/message-icon.svg";
+import { useContext } from "react/cjs/react.development";
+import { GlobalContext } from "../GlobalContext";
 
 export default function ContactSection() {
   const [inputNameFocus, setInputNameFocus] = useState(false);
@@ -33,28 +35,30 @@ export default function ContactSection() {
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
 
+  const { theme } = useContext(GlobalContext);
+
   return (
     <ContactWrapper>
       <TextContainer>
         <CursiveText left>Contact Us</CursiveText>
-        <Title>Contact For Any Query</Title>
+        <Title color={theme.titleColor}>Contact For Any Query</Title>
       </TextContainer>
       <EmailContainer>
         <EmailContent>
           <CursiveText>Booking</CursiveText>
-          <EmailText>
+          <EmailText color={theme.textColor}>
             <EmailIcon src={message_icon} alt="" /> book@email.com
           </EmailText>
         </EmailContent>
         <EmailContent>
           <CursiveText>General</CursiveText>
-          <EmailText>
+          <EmailText color={theme.textColor}>
             <EmailIcon src={message_icon} alt="" /> info@example.com
           </EmailText>
         </EmailContent>
         <EmailContent>
           <CursiveText>Technical</CursiveText>
-          <EmailText>
+          <EmailText color={theme.textColor}>
             <EmailIcon src={message_icon} alt="" /> tech@example.com
           </EmailText>
         </EmailContent>

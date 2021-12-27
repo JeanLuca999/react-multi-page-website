@@ -50,6 +50,7 @@ export const Profession = styled.span`
 export const Card = styled.div`
   padding: 1.25rem 1rem;
   border: 1px solid lightgray;
+  background-color: #fff;
 
   max-width: 400px;
   width: 100%;

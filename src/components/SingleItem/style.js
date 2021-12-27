@@ -33,12 +33,12 @@ export const ItemPrice = styled.p`
 
 export const ItemDescription = styled.p`
   font-size: 1rem;
-  color: #666565;
+  color: ${(props) => props.color};
   margin: 5px 0;
 `;
 
 export const ItemTitle = styled.span`
-  color: black;
+  color: ${(props) => props.color};
   font-weight: bold;
   font-family: "Nunito", sans-serif;
   font-size: 1.25rem;

@@ -13,21 +13,26 @@ import { CursiveText } from "../CursiveText";
 import MetricsInfo from "../MetricsInfo";
 import logo from "../../assets/logo.svg";
 import GridImages from "../GridImages";
+import { useContext } from "react/cjs/react.development";
+import { GlobalContext } from "../GlobalContext";
 
 export default function WelcomeSection() {
+  const { theme } = useContext(GlobalContext);
+  console.log("a cor é ", theme.titleColor);
+
   return (
     <WelcomeSectionWrapper>
       <GridImages />
       <TextContainer>
         <CursiveText>About Us</CursiveText>
-        <Title>
+        <Title color={theme.titleColor}>
           Welcome to <Icon src={logo} /> Restoran
         </Title>
-        <Text>
+        <Text color={theme.textColor}>
           Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
           diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.
         </Text>
-        <Text>
+        <Text color={theme.textColor}>
           Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
           diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.
         </Text>

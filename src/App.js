@@ -13,18 +13,40 @@ import Testimonial from "./pages/Testimonial";
 import Contact from "./pages/Contact";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const themeValues = {
+    light: {
+      backgroundColor: "#fff",
+      textColor: "#666565",
+      titleColor: "#0f172b",
+    },
+    dark: {
+      backgroundColor: "#181818",
+      textColor: "#fff",
+      titleColor: "#fff",
+    },
+  };
 
+  const [theme, setTheme] = useState(themeValues.light);
+  const [menuOpen, setMenuOpen] = useState(false);
+  console.log(theme);
   function handleMenuClick() {
     setMenuOpen((prev) => !prev);
     console.log("menu clicked");
+  }
+
+  function toggleTheme() {
+    theme.textColor === "#fff"
+      ? setTheme(themeValues.light)
+      : setTheme(themeValues.dark);
   }
 
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
-        <GlobalContext.Provider value={{ menuOpen, handleMenuClick }}>
+        <GlobalContext.Provider
+          value={{ theme, toggleTheme, menuOpen, handleMenuClick }}
+        >
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>

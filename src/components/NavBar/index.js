@@ -17,6 +17,7 @@ import { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/index";
 import MenuMobile from "../MenuMobile";
 import { GlobalContext } from "../GlobalContext";
+import ThemeButton from "../ThemeButton";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,6 +37,8 @@ export default function NavBar() {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const { toggleTheme } = useContext(GlobalContext);
 
   return (
     <Header scrolled={scrolled}>
@@ -76,6 +79,9 @@ export default function NavBar() {
           </Li>
           <Li>
             <NavCTA>book a table</NavCTA>
+          </Li>
+          <Li>
+            <ThemeButton />
           </Li>
         </Ul>
       </Nav>

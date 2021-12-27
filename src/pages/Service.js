@@ -5,18 +5,23 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 import { useEffect } from "react";
+import { useContext } from "react/cjs/react.development";
+import { GlobalContext } from "../components/GlobalContext";
 
 export default function Service() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const { theme } = useContext(GlobalContext);
+
   return (
     <>
       <BackgroundPage>
         <NavBar />
         <BannerTitleInfo title={"Services"} pathName="service" />
       </BackgroundPage>
-      <main>
+      <main style={{ backgroundColor: theme.backgroundColor }}>
         <CardSection />
       </main>
       <Footer />

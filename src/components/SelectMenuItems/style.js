@@ -39,7 +39,7 @@ export const TextContainer = styled.div`
 
 export const Type = styled.p`
   font-size: 1.25rem;
-  color: #0f172b;
+  color: ${(props) => props.color};
   font-weight: bold;
   font-family: "Nunito", sans-serif;
 
@@ -50,7 +50,7 @@ export const Type = styled.p`
 
 export const Category = styled.p`
   font-size: 1.25rem;
-  color: #666565;
+  color: ${(props) => props.color};
   text-align: left;
 
   @media screen and (min-width: 800px) {

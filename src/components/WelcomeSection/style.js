@@ -21,7 +21,7 @@ export const TextContainer = styled.div``;
 export const Title = styled.h2`
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
-  color: #0f172b;
+  color: ${(props) => props.color};
   font-weight: bolder;
   margin-bottom: 1rem;
 `;
@@ -34,7 +34,7 @@ export const Icon = styled.img`
 `;
 
 export const Text = styled.p`
-  color: #666565;
+  color: ${(props) => props.color};
   font-size: 1.25rem;
   line-height: 1.2;
   margin-bottom: 1rem;

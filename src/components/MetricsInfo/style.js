@@ -20,7 +20,7 @@ export const MetricsTextContainer = styled.div``;
 
 export const Text = styled.p`
   font-size: 1.25rem;
-  color: #666565;
+  color: ${(props) => props.color};
 
   @media screen and (min-width: 800px) {
     font-size: 1rem;
@@ -31,6 +31,7 @@ export const TextBold = styled.p`
   font-size: 1.25rem;
   font-weight: bolder;
   text-transform: uppercase;
+  color: ${(props) => props.color};
   @media screen and (min-width: 800px) {
     font-size: 1rem;
   }
