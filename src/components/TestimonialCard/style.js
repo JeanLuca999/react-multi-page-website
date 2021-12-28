@@ -48,18 +48,15 @@ export const Profession = styled.span`
 `;
 
 export const Card = styled.div`
-  padding: 1.25rem 1rem;
   border: 1px solid lightgray;
   background-color: #fff;
 
   max-width: 400px;
   width: 100%;
-  flex-shrink: 0;
-  margin: 0 5px;
+  margin: 0 10px;
+  padding: 15px;
 
-  &:hover,
-  &:focus,
-  &:focus-within {
+  &:hover {
     background-color: #fea116;
     ${Text}, ${Name}, ${Profession} {
       color: #fff;

@@ -1,13 +1,20 @@
 import { CursiveText } from "../CursiveText";
 import TestemonialCard from "../TestimonialCard/";
-import { Wrapper, TextContainer, CardsWrapper, Title } from "./style";
+import { Wrapper, TextContainer, Title } from "./style";
 
 import client01 from "../../assets/chef01.jpg";
 import { useContext } from "react/cjs/react.development";
 import { GlobalContext } from "../GlobalContext";
+import ReactElasticCarousel from "react-elastic-carousel";
 
 export default function TestimonialSection() {
   const { theme } = useContext(GlobalContext);
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 4 },
+  ];
 
   return (
     <Wrapper>
@@ -15,7 +22,7 @@ export default function TestimonialSection() {
         <CursiveText left>Testimonial</CursiveText>
         <Title color={theme.titleColor}>Our Clients Say!!!</Title>
       </TextContainer>
-      <CardsWrapper>
+      <ReactElasticCarousel breakPoints={breakPoints}>
         <TestemonialCard
           name={"Client Name"}
           profession={"profession"}
@@ -56,7 +63,7 @@ export default function TestimonialSection() {
           }
           photo={client01}
         />
-      </CardsWrapper>
+      </ReactElasticCarousel>
     </Wrapper>
   );
 }

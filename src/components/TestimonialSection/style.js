@@ -9,6 +9,7 @@ export const Wrapper = styled.section`
 
 export const TextContainer = styled.div`
   text-align: center;
+  margin-bottom: 3rem;
 `;
 
 export const Title = styled.h2`

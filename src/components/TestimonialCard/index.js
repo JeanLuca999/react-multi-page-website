@@ -19,8 +19,6 @@ export default function TestimonialCard({ name, text, photo, profession }) {
   return (
     <Card
       tabIndex={0}
-      onFocus={() => setCurrentIconColor(quote_icon_white)}
-      onBlur={() => setCurrentIconColor(quote_icon)}
       onMouseEnter={() => setCurrentIconColor(quote_icon_white)}
       onMouseLeave={() => setCurrentIconColor(quote_icon)}
     >
