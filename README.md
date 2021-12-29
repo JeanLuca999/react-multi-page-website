@@ -22,15 +22,15 @@ utilize o comando `npm start` para inicializar.
 
 ### Desktop
 
-![preview01](./public/preview01.PNG)
-![preview02](./public/preview02.PNG)
-![preview03](./public/preview03.PNG)
+![preview01](./public/preview01.PNG) <br>
+![preview02](./public/preview02.PNG) <br>
+![preview03](./public/preview03.PNG) <br>
 
 ### Mobile
 
-![preview04](./public/preview04.PNG)
-![preview05](./public/preview05.PNG)
+![preview04](./public/preview04.PNG) <br>
+![preview05](./public/preview05.PNG) <br>
 
 ## Dark Mode
 
-![preview06](./public/preview06.PNG)
+![preview06](./public/preview06.PNG) <br>
