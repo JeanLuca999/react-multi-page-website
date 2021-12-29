@@ -20,6 +20,8 @@ utilize o comando `npm start` para inicializar.
 
 ## 💻 Preview do Projeto
 
+O site está completamente responsivo e contém todas as rotas indicadas, para ter uma visualização completa baixe o projeto localmente. <br>
+
 ### Desktop
 
 ![preview01](./public/preview01.PNG) <br>
