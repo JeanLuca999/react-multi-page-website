@@ -3,7 +3,7 @@
 ## 📝 Sobre o Projeto
 
 Este projeto se trata da recriação de um template do bootstrap, porém refazendo o site totalmente do zero utilizando React. <br>
-O site também conta com uma funcionalidade extra para a troca de entre temas dark/light
+O site também conta com uma funcionalidade extra para a troca entre temas dark/light
 
 ## ⚛️ Tecnologias Utilizadas
 
