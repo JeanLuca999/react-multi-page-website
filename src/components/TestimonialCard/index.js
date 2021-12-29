@@ -22,7 +22,7 @@ export default function TestimonialCard({ name, text, photo, profession }) {
       onMouseEnter={() => setCurrentIconColor(quote_icon_white)}
       onMouseLeave={() => setCurrentIconColor(quote_icon)}
     >
-      <Icon src={currentIconColor}></Icon>
+      <Icon src={currentIconColor} alt=""></Icon>
       <Text>{text}</Text>
       <AboutContainer>
         <Photo src={photo} alt={name}></Photo>

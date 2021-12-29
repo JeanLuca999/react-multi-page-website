@@ -63,13 +63,13 @@ export default function Footer() {
             </ContactLi>
             <ContactIcons>
               <IconContainer>
-                <Icon src={twitter_icon}></Icon>
+                <Icon src={twitter_icon} alt="twitter"></Icon>
               </IconContainer>
               <IconContainer>
-                <Icon src={facebook_icon}></Icon>
+                <Icon src={facebook_icon} alt="facebook"></Icon>
               </IconContainer>
               <IconContainer>
-                <Icon src={instagram_icon}></Icon>
+                <Icon src={instagram_icon} alt="instagram"></Icon>
               </IconContainer>
             </ContactIcons>
           </Ul>

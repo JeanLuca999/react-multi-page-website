@@ -25,7 +25,7 @@ export default function WelcomeSection() {
       <TextContainer>
         <CursiveText>About Us</CursiveText>
         <Title color={theme.titleColor}>
-          Welcome to <Icon src={logo} /> Restoran
+          Welcome to <Icon src={logo} alt="" /> Restoran
         </Title>
         <Text color={theme.textColor}>
           Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu

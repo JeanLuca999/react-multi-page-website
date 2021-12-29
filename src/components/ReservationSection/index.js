@@ -43,14 +43,15 @@ export default function ReservationSection() {
 
   return (
     <Wrapper>
-      <Image alt="two people eating together" src={restoran_thumb_form_form} />
+      <Image alt="" src={restoran_thumb_form_form} />
       <FormContainer>
         <CursiveText>Reservation</CursiveText>
         <FormTitle>Book a Table Online</FormTitle>
         <Form>
           <LabelContainer inputNameFocus={inputNameFocus}>
-            <Label>Your Name</Label>
+            <Label htmlFor="inputName">Your Name</Label>
             <InputName
+              id="inputName"
               type={"text"}
               placeholder="Your name"
               value={name}
@@ -61,8 +62,9 @@ export default function ReservationSection() {
           </LabelContainer>
 
           <LabelContainer inputEmailFocus={inputEmailFocus}>
-            <Label>Your Email</Label>
+            <Label htmlFor="inputEmail">Your Email</Label>
             <InputEmail
+              id="inputEmail"
               type={"email"}
               placeholder="Your email"
               value={email}
@@ -79,8 +81,9 @@ export default function ReservationSection() {
             <Option>People 3</Option>
           </SelectNumberPeople>
           <LabelContainer textAreaFocus={textAreaFocus}>
-            <Label>Special Request</Label>
+            <Label htmlFor="TextArea">Special Request</Label>
             <TextArea
+              id="TextArea"
               placeholder="Special Request"
               value={text}
               onChange={(e) => setText(e.target.value)}

@@ -25,6 +25,14 @@ export default function NavBar() {
     setMenuOpen((prev) => !prev);
   }
 
+  function handleFocusMenu() {
+    setMenuOpen(true);
+  }
+
+  function handleBlurMenu() {
+    setMenuOpen(false);
+  }
+
   const [scrolled, setScrolled] = useState(false);
 
   function onScroll() {
@@ -46,7 +54,12 @@ export default function NavBar() {
       <Nav scrolled={scrolled}>
         <LogoMenuWrapper>
           <Logo />
-          <MenuMobile handleMenuClick={handleMenuClick} />
+          <MenuMobile
+            handleMenuClick={handleMenuClick}
+            menuOpen={menuOpen}
+            handleFocusMenu={handleFocusMenu}
+            handleBlurMenu={handleBlurMenu}
+          />
         </LogoMenuWrapper>
         <Ul menuOpen={menuOpen}>
           <Li>
@@ -82,7 +95,7 @@ export default function NavBar() {
             <NavCTA>book a table</NavCTA>
           </Li>
           <Li>
-            <ThemeButton />
+            <ThemeButton handleBlurMenu={handleBlurMenu} />
           </Li>
         </Ul>
       </Nav>

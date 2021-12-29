@@ -4,7 +4,7 @@ import svg from "../../assets/logo.svg";
 export default function Logo() {
   return (
     <LogoContainer>
-      <Image src={svg}></Image>
+      <Image src={svg} alt="logo restoran"></Image>
       <LogoText>Restoran</LogoText>
     </LogoContainer>
   );

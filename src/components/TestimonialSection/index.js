@@ -3,7 +3,7 @@ import TestemonialCard from "../TestimonialCard/";
 import { Wrapper, TextContainer, Title } from "./style";
 
 import client01 from "../../assets/chef01.jpg";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import { GlobalContext } from "../GlobalContext";
 import ReactElasticCarousel from "react-elastic-carousel";
 

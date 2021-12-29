@@ -17,7 +17,7 @@ export default function SingleItem() {
 
   return (
     <Container>
-      <ItemImage src={imgSrc}></ItemImage>
+      <ItemImage src={imgSrc} alt="Chiken Burger"></ItemImage>
       <TextContainer>
         <TitleWrapper>
           <ItemTitle color={theme.titleColor}>Chiken Burger</ItemTitle>
