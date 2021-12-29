@@ -23,13 +23,13 @@ export default function CardTeamMember({ name, imgSrc, designation }) {
       <Designation>{designation}</Designation>
       <IconsWrapper>
         <IconContainer>
-          <Icon src={facebook_icon} tabIndex={0} />
+          <Icon src={facebook_icon} tabIndex={0} alt="facebook" />
         </IconContainer>
         <IconContainer>
-          <Icon src={twitter_icon} tabIndex={0} />
+          <Icon src={twitter_icon} tabIndex={0} alt="twitter" />
         </IconContainer>
         <IconContainer>
-          <Icon src={instagram_icon} tabIndex={0} />
+          <Icon src={instagram_icon} tabIndex={0} alt="instagram" />
         </IconContainer>
       </IconsWrapper>
     </Card>
