@@ -3,12 +3,11 @@ import TestemonialCard from "../TestimonialCard/";
 import { Wrapper, TextContainer, Title } from "./style";
 
 import client01 from "../../assets/chef01.jpg";
-import { useContext } from "react";
-import { GlobalContext } from "../GlobalContext";
 import ReactElasticCarousel from "react-elastic-carousel";
+import { useTheme } from "../../context/Theme";
 
 export default function TestimonialSection() {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2, itemsToScroll: 2 },

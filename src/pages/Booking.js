@@ -4,15 +4,14 @@ import BannerTitleInfo from "../components/BannerTitleInfo";
 import ReservationSection from "../components/ReservationSection";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../components/GlobalContext";
+import { useTheme } from "../context/Theme";
 
 export default function Booking() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <>

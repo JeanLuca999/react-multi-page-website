@@ -3,11 +3,10 @@ import { Container, Item, Icon, TextContainer, Category, Type } from "./style";
 import coffe from "../../assets/coffee-icon.svg";
 import utensils from "../../assets/logo.svg";
 import hamburguer from "../../assets/hamburger-icon.svg";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 
 export default function SelectMenuItems() {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <Container>

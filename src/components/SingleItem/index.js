@@ -9,11 +9,10 @@ import {
 } from "./style";
 
 import imgSrc from "../../assets/food01.jpg";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 
 export default function SingleItem() {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <Container>

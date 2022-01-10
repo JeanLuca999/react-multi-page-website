@@ -23,6 +23,7 @@ import {
 import message_icon from "../../assets/message-icon.svg";
 import { useContext } from "react/cjs/react.development";
 import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 
 export default function ContactSection() {
   const [inputNameFocus, setInputNameFocus] = useState(false);
@@ -35,7 +36,7 @@ export default function ContactSection() {
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
 
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <ContactWrapper>

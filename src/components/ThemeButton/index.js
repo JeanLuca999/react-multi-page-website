@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 import { Button } from "./style";
 
 export default function ThemeButton({ handleBlurMenu }) {
-  const { theme, toggleTheme } = useContext(GlobalContext);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <Button

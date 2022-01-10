@@ -1,8 +1,8 @@
-import { useContext, useEffect } from "react/cjs/react.development";
+import { useEffect } from "react/cjs/react.development";
+import { useTheme } from "../context/Theme";
 import BackgroundPage from "../components/BackgroundPage";
 import BannerTitleInfo from "../components/BannerTitleInfo";
 import Footer from "../components/Footer";
-import { GlobalContext } from "../components/GlobalContext";
 import NavBar from "../components/NavBar";
 import TeamMembersSection from "../components/TeamMembersSection";
 import WelcomeSection from "../components/WelcomeSection";
@@ -12,7 +12,7 @@ export default function About() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <>

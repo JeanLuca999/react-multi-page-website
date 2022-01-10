@@ -6,11 +6,10 @@ import chef02 from "../../assets/chef02.jpg";
 import chef03 from "../../assets/chef03.jpg";
 import chef04 from "../../assets/chef04.jpg";
 import { CursiveText } from "../CursiveText";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 
 export default function TeamMembersSection() {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <Wrapper>

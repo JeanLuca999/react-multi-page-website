@@ -2,11 +2,10 @@ import { CursiveText } from "../CursiveText";
 import SelectMenuItems from "../SelectMenuItems";
 import { Wrapper, Title, TextContainer } from "./style";
 import WrapperMenuItems from "../WrapperMenuItems";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 
 export default function MostPopularItemsSection() {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <Wrapper>

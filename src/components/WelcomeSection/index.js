@@ -13,11 +13,10 @@ import { CursiveText } from "../CursiveText";
 import MetricsInfo from "../MetricsInfo";
 import logo from "../../assets/logo.svg";
 import GridImages from "../GridImages";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 
 export default function WelcomeSection() {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <WelcomeSectionWrapper>

@@ -5,15 +5,14 @@ import MostPopularItemsSection from "../components/MostPopularItemsSection";
 import NavBar from "../components/NavBar";
 
 import { useEffect } from "react";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../components/GlobalContext";
+import { useTheme } from "../context/Theme";
 
 export default function Menu() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <>

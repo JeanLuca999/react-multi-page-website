@@ -1,8 +1,8 @@
-import { useContext, useEffect } from "react/cjs/react.development";
+import { useEffect } from "react/cjs/react.development";
+import { useTheme } from "../context/Theme";
 import BackgroundPage from "../components/BackgroundPage";
 import CardSection from "../components/CardSection";
 import Footer from "../components/Footer";
-import { GlobalContext } from "../components/GlobalContext";
 import HomeBannerInfo from "../components/HomeBannerInfo";
 import MostPopularItemsSection from "../components/MostPopularItemsSection";
 import NavBar from "../components/NavBar";
@@ -16,7 +16,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <>

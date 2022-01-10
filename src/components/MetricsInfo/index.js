@@ -1,5 +1,4 @@
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../GlobalContext";
+import { useTheme } from "../../context/Theme";
 import {
   MetricsWrapper,
   MetricsNumber,
@@ -9,7 +8,7 @@ import {
 } from "./style";
 
 export default function MetricsInfo({ number, text, textBold }) {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useTheme();
 
   return (
     <MetricsWrapper>
