@@ -21,8 +21,6 @@ import {
 } from "./style";
 
 import message_icon from "../../assets/message-icon.svg";
-import { useContext } from "react/cjs/react.development";
-import { GlobalContext } from "../GlobalContext";
 import { useTheme } from "../../context/Theme";
 
 export default function ContactSection() {
